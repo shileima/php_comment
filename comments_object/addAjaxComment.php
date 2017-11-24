@@ -20,4 +20,6 @@ if($username == '' || $content ==''){
 
     $commentAdd = new CommentBook();
     $commentAdd->write($comment);
+
+    echo json_encode(array('code'=>0,'msg'=>'评论成功'));
 }

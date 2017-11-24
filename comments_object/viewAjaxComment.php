@@ -9,10 +9,11 @@
     <title>PHP 简易评论</title>
 </head>
 <style>
-    #comment {margin-top: 40px;}
+    #comment {margin-top: 0.4vw;}
+    hr{margin:10px 0;}
 </style>
 <body>
-<div id="container" style="margin: 50px;">
+<div id="container" style="margin: 10px;">
     <div class="form-group">
         <label for="exampleInputEmail1">用户名:</label>
         <input id="username" type="text" class="form-control" name="username" placeholder="username">

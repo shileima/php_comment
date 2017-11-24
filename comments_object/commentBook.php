@@ -27,8 +27,6 @@ class CommentBook
         $commentFile = fopen(self::FilePath,'w');
         fwrite($commentFile,serialize($commentList));
         fclose($commentFile);
-
-        echo json_encode(array('code'=>0,'msg'=>'评论成功'));
     }
 
     public function view($page,$limit){
@@ -44,7 +42,7 @@ class CommentBook
 
         for($i=$start;$i<$start+$limit;$i++){
             if(isset($commentList[$i])){
-                echo '用户名: '.$commentList[$i]['username'].'<br>'.'内容: '.$commentList[$i]['content'].'<hr>';
+                echo '<div style="margin: 10px 0;">用户名: '.$commentList[$i]['username'].'<br>'.'内容: '.$commentList[$i]['content'].'</div>'.'<hr>';
             } else {
                 break;
             }
